@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai_Investors_using_DOM</title>
+    <style>
+
+        #investor{
+            font-size: 25px;
+            font-weight: 900;
+            text-align: center;
+            font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";  
+        }
+        #container{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            
+            
+        }
+        #container>div{
+            width: 95%;
+            margin: 15px;  
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border : 1px solid rgb(207, 208, 206)
+
+            
+        }
+        #container>div>:nth-child(1){
+            
+            height: 68%;
+            width: 100%;
+            margin: auto;
+            border-radius: 10px 10px 0px 0px;
+                
+        }
+        
+        #container>div>:nth-child(4){
+            
+            height: 10%;
+            width: 99%;
+            text-align: center; 
+            margin-top: 20px;        
+        }  
+        
+             
+
+        #container>div>:nth-child(1)>img{
+            
+            height: 99%;
+            width: 100%;
+            margin: auto;
+            border-radius: 10px 10px 0px 0px;       
+        }
+
+        #container>div>:nth-child(4)>img{
+            
+            height: 100%;
+            width: 50%;
+            margin: auto;  
+                
+        }
+
+        #container>div>:nth-child(2){
+            text-align: center;
+            margin:auto;
+            font-size: 18px;
+            font-weight: 700;  
+            color: #0a0103;
+            font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";  
+                
+        }
+
+        #container>div>:nth-child(3){
+            text-align: center;
+            margin:auto;
+            font-size: 16px;
+            font-weight: 400;  
+            color: #6e6b6c; 
+            font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; 
+                
+        }
+        @media screen and (max-width: 1220px) and (min-width: 750px){
+            #container{
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: auto auto;
+            
+            
+        }
+        
+
+        }
+
+        @media screen and (max-width: 750px) and (min-width: 0px){
+            #container{
+            width: 70%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: auto; 
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="investor">
+        
+    </div>
+    
+    <div id="container">
+
+    </div>
+</body>
+</html>
+<script>
+    let investor = document.getElementById('investor')
+    let h1 = document.createElement('h1')
+    h1.innerText = 'Strategic Investors'
+    investor.append(h1)
+    let container = document.getElementById('container')
+    let creatediv1 = document.createElement('div')
+    let creatediv2 = document.createElement('div')
+    let creatediv3 = document.createElement('div')
+    let creatediv4 = document.createElement('div')
+    container.append(creatediv1,creatediv2,creatediv3,creatediv4)
+
+{
+    let imgdiv1 = document.createElement('div')
+    let picture = document.createElement('img')
+    picture.src = 'https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg'
+    imgdiv1.append(picture)
+    let p1 = document.createElement('p')
+    p1.innerText = 'Vijay Shekhar Sharma'
+    let p2 = document.createElement('p')
+    p2.innerText = 'Founder and CEO'
+    let imgdiv2 = document.createElement('div')
+    
+    let picture2 = document.createElement('img')
+    picture2.src = 'https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg'
+    imgdiv2.append(picture2)
+    creatediv1.append(imgdiv1,p1,p2,imgdiv2)
+
+}
+{
+    let imgdiv1 = document.createElement('div')
+    let picture = document.createElement('img')
+    picture.src = 'https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png'
+    imgdiv1.append(picture)
+    let p1 = document.createElement('p')
+    p1.innerText = 'Kunal Shah'
+    let p2 = document.createElement('p')
+    p2.innerText = 'Founder'
+    let imgdiv2 = document.createElement('div')
+    let picture2 = document.createElement('img')
+    picture2.src = 'https://masai-website-images.s3.ap-south-1.amazonaws.com/cred_0a47d7b4f8.png'
+    imgdiv2.append(picture2)
+    creatediv2.append(imgdiv1,p1,p2,imgdiv2)
+}
+
+{
+    let imgdiv1 = document.createElement('div')
+    let picture = document.createElement('img')
+    picture.src = 'https://masai-website-images.s3.ap-south-1.amazonaws.com/amrish_rau_pine_labs_144e5e587c.jpg'
+    imgdiv1.append(picture)
+    let p1 = document.createElement('p')
+    p1.innerText = 'Amrish Rau'
+    let p2 = document.createElement('p')
+    p2.innerText = 'CEO'
+    let imgdiv2 = document.createElement('div')
+    let picture2 = document.createElement('img')
+    picture2.src = 'https://masai-website-images.s3.ap-south-1.amazonaws.com/pine_labs_0aa2407434.png'
+    imgdiv2.append(picture2)
+    creatediv3.append(imgdiv1,p1,p2,imgdiv2)
+}
+
+{
+    let imgdiv1 = document.createElement('div')
+    let picture = document.createElement('img')
+    picture.src = 'https://masai-website-images.s3.ap-south-1.amazonaws.com/Sampad_swain_Instamojo_f12bf6341e.jpg'
+    imgdiv1.append(picture)
+    let p1 = document.createElement('p')
+    p1.innerText = 'Sampad Swain'
+    let p2 = document.createElement('p')
+    p2.innerText = 'Co-Founder & CEO'
+    let imgdiv2 = document.createElement('div')
+    let picture2 = document.createElement('img')
+    picture2.src = 'https://masai-website-images.s3.ap-south-1.amazonaws.com/instamojo_8763e704f7.png'
+    imgdiv2.append(picture2)
+    creatediv4.append(imgdiv1,p1,p2,imgdiv2)
+}
+
+</script>
